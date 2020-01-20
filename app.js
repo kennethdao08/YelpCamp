@@ -19,7 +19,9 @@ var commentRoutes = require("./routes/comments"),
 // Seed database
 // seedDB();
 
-mongoose.connect(process.env.DATABASEURL, {
+var url = process.env.DATABASEURL || "mogodb://localhost/yelp_camp";
+
+mongoose.connect(url, {
 	useNewUrlParser: true, 
 	useUnifiedTopology: true
 });
