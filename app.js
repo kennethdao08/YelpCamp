@@ -19,15 +19,17 @@ var commentRoutes = require("./routes/comments"),
 // Seed database
 // seedDB();
 
-// mongoose.connect("mongodb://localhost/yelp_camp", {
+mongoose.connect(process.env.DATABASEURL, {
+	useNewUrlParser: true, 
+	useUnifiedTopology: true
+});
+
+// mongoose.connect("mongodb+srv://vimz:d4nkmemes@cluster0-e25b3.mongodb.net/test?retryWrites=true&w=majority", {
 // 	useNewUrlParser: true, 
 // 	useUnifiedTopology: true
 // });
 
-mongoose.connect("mongodb+srv://vimz:d4nkmemes@cluster0-e25b3.mongodb.net/test?retryWrites=true&w=majority", {
-	useNewUrlParser: true, 
-	useUnifiedTopology: true
-});
+
 
 app.use(bodyParser.urlencoded({extended: true}));
 
