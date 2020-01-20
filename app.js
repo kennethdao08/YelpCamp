@@ -24,11 +24,6 @@ mongoose.connect(process.env.DATABASEURL, {
 	useUnifiedTopology: true
 });
 
-// mongoose.connect("mongodb+srv://vimz:d4nkmemes@cluster0-e25b3.mongodb.net/test?retryWrites=true&w=majority", {
-// 	useNewUrlParser: true, 
-// 	useUnifiedTopology: true
-// });
-
 
 
 app.use(bodyParser.urlencoded({extended: true}));
